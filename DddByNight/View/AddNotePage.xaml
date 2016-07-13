@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DddByNight.View.AddNotePage"
+		xmlns:controls="clr-namespace:DddByNight.Controls;assembly=DddByNight"
+		Padding="0,20,0,0">
+    <ContentPage.Content>
+
+        <StackLayout Padding="10">
+
+			<Label Text="Add new note" />
+			<Entry Text="{Binding NoteText}" />
+			<controls:CleanButton Text="Save" Command="{Binding AddNoteCommand}" />
+			
+	    </StackLayout>
+		
+    </ContentPage.Content>
+</ContentPage>

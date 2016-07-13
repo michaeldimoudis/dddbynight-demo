@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DddByNight.View.NotesListPage"
+		xmlns:controls="clr-namespace:DddByNight.Controls;assembly=DddByNight">
+    <ContentPage.Content>
+
+		<StackLayout>
+
+            <controls:ListView 
+				ItemsSource="{Binding Notes}"
+			    ItemTappedCommand="{Binding ItemTappedCommand}">
+
+				<ListView.ItemTemplate>
+					<DataTemplate>
+                        <ViewCell>
+							
+                            <StackLayout Padding="10,0,10,0">
+								
+                                <Label Text="{Binding Note}" />
+                                <Label Text="{Binding DateDisplay}" FontSize="10" TextColor="Blue" />
+
+                            </StackLayout>
+							
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+				
+			</controls:ListView>
+
+            <controls:FloatingButton TapCommand="{Binding OnFloatButtonTap}"></controls:FloatingButton>
+            
+	    </StackLayout>
+		
+    </ContentPage.Content>
+</ContentPage>
